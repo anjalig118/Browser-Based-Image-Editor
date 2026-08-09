@@ -200,23 +200,20 @@ resetButton.addEventListener("click",()=>{
 })
 
 downloadButton.addEventListener("click", () => {
-    if (!imageCanvas) return
-
-    const mimeType = "image/jpeg"
-    const filename = "edited-image.jpeg"
+    if (!imageCanvas) return;
 
     imageCanvas.toBlob((blob) => {
-        if (!blob) return
-        const blobUrl = URL.createObjectURL(blob)
-        const link = document.createElement("a")
-        link.href = blobUrl
-        link.download = filename
-        document.body.appendChild(link)
-        link.click()
-        document.body.removeChild(link)
-        setTimeout(() => URL.revokeObjectURL(blobUrl), 1000)
-    }, mimeType, 0.95)
-})
+        if (!blob) return;
+        const blobUrl = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.download = "edited-image.jpg";
+        link.href = blobUrl;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+    }, "image/jpeg", 0.92);
+});
 
 const presets = {
   normal: {
