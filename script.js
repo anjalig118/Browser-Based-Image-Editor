@@ -202,20 +202,8 @@ resetButton.addEventListener("click",()=>{
 downloadButton.addEventListener("click", () => {
     if (!imageCanvas) return
 
-    let mimeType = "image/png"
-    let ext = "png"
-
-    if (file) {
-        const type = (file.type || "").toLowerCase()
-        const name = (file.name || "").toLowerCase()
-        const isJpeg = type.includes("jpeg") || type.includes("jpg") || name.endsWith(".jpg") || name.endsWith(".jpeg")
-        if (isJpeg) {
-            mimeType = "image/jpeg"
-            ext = "jpeg"
-        }
-    }
-
-    const filename = `edited-image.${ext}`
+    const mimeType = "image/jpeg"
+    const filename = "edited-image.jpeg"
 
     imageCanvas.toBlob((blob) => {
         if (!blob) return
