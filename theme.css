@@ -1,51 +1,63 @@
-:root{
-    /*bg colors */
-    --bg-primary-color:rgb(18, 15, 22);
-    --bg-secondary-color: rgb(34,34,34);
-    --bg-active-color: rgb(233,233,233);
-    --bg-danger-color:rgb(200,50,50);
-    --bg-success-color: rgb(50, 107, 37);
+:root {
+    /* Background colors - Dark Charcoal / Near Black */
+    --bg-primary-color: #0d0e11;
+    --bg-secondary-color: #16181d;
+    --bg-tertiary-color: #1e2027;
+    --bg-active-color: #ede4d4; /* Warm Cream */
+    --bg-danger-color: rgba(255, 255, 255, 0.05); /* Soft glass for Reset (no red) */
+    --bg-success-color: #cbb279; /* Muted Gold / Tan for Download */
 
-    /*text color*/
-    --text-primary-color:rgb(237, 237, 237);
-    --text-secondary-color: rgb(200,200,200);
-    --text-tertiary-color: rgb(150,150,150);
-    --text-active-color: rgb(24,24,24);   
+    /* Accent colors */
+    --accent-cream: #ede4d4;
+    --accent-gold: #d4af37;
+    --accent-gold-muted: #cbb279;
+    --accent-gold-hover: #e5c365;
 
-    /* paddings */
+    /* Text colors */
+    --text-primary-color: #f0ede6;
+    --text-secondary-color: #a09d96;
+    --text-tertiary-color: #6e6c66;
+    --text-active-color: #101114;
+
+    /* Borders & Shadows */
+    --border-color: rgba(237, 228, 212, 0.1);
+    --border-hover-color: rgba(212, 175, 55, 0.3);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+    --shadow-glow: 0 0 12px rgba(212, 175, 55, 0.2);
+
+    /* Paddings */
     --padding-sm: 0.5rem;
     --padding-md: 1rem;
     --padding-lg: 1.5rem;
     --padding-xl: 2rem;
     --padding-2xl: 3rem;
 
-    /* margin*/
+    /* Margins */
     --margin-sm: 0.5rem;
     --margin-md: 1rem;
     --margin-lg: 1.5rem;
     --margin-xl: 2rem;
     --margin-2xl: 3rem;
 
-    /* gutter jaha per display flex use karenge(element ke beech ka space)*/
+    /* Gutters (Flex layout spacing) */
     --gutter-sm: 0.5rem;
     --gutter-md: 1rem;
     --gutter-lg: 1.5rem;
     --gutter-xl: 2rem;
     --gutter-2xl: 3rem;
 
-    /*font size*/
-    --font-size-sm: 0.875rem;
-    --font-size-md: 1rem;
-    --font-size-lg: 1.125rem;
-    --font-size-xl: 1.125rem;
+    /* Font Sizes */
+    --font-size-sm: 0.85rem;
+    --font-size-md: 0.95rem;
+    --font-size-lg: 1.1rem;
+    --font-size-xl: 1.25rem;
     --font-size-2xl: 1.5rem;
 
-    /*Border radius*/
-    --border-radius-sm: 0.2rem;
-    --border-radius-md: 0.25rem;
-    --border-radius-lg: 0.3rem;
-    --border-radius-xl: 0.4rem;
-    --border-radius-2xl: 0.5rem;
-
-    
+    /* Border Radii */
+    --border-radius-sm: 6px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+    --border-radius-2xl: 24px;
 }
