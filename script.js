@@ -205,13 +205,13 @@ downloadButton.addEventListener("click", () => {
     let mimeType = "image/png"
     let ext = "png"
 
-    if (file && file.type) {
-        if (file.type === "image/jpeg" || file.type === "image/jpg" || file.type === "image/jfif") {
+    if (file) {
+        const type = (file.type || "").toLowerCase()
+        const name = (file.name || "").toLowerCase()
+        const isJpeg = type.includes("jpeg") || type.includes("jpg") || name.endsWith(".jpg") || name.endsWith(".jpeg")
+        if (isJpeg) {
             mimeType = "image/jpeg"
-            ext = "jpg"
-        } else if (file.type === "image/webp") {
-            mimeType = "image/webp"
-            ext = "webp"
+            ext = "jpeg"
         }
     }
 
